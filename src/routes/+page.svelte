@@ -27,7 +27,9 @@
 	>
 		Behind the increasingly expansive hurricanes
 	</h1>
-	<p class="mx-auto mb-8 max-w-[600px] text-gray-500">By Muxing Chen</p>
+	<p class="xs:text-[14px] mx-auto mb-8 max-w-[600px] text-gray-500 md:text-[16px]">
+		By Muxing Chen
+	</p>
 	{#each content as section, i}
 		{#if i === 1}
 			<AdjacentBarChart data={decadeData} />

@@ -9,7 +9,7 @@
 		dx={xBandScale.bandwidth() / 2}
 		dy={4}
 		text-anchor="middle"
-		font-size="14px"
+		font-size="12px"
 		alignment-baseline="hanging"
 		fill="var(--color-gray-400)"
 	>
