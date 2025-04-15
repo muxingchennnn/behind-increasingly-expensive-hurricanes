@@ -23,7 +23,7 @@
 	--color-gray-900: #1e1e1e;
 
 	--color-foreground: var(--color-gray-900);
-	--color-background: var(--color-gray-100);
+	--color-background: #f8f8f8;
 }
 
 @layer base {
