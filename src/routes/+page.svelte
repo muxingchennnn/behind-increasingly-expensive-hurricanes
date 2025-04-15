@@ -25,7 +25,7 @@
 	<h1
 		class="xs:text-[24px] mx-auto mb-4 max-w-[600px] font-serif leading-[1.2em] font-[700] text-pretty md:text-[28px]"
 	>
-		Behind the increasingly expansive hurricanes
+		Behind the increasingly expensive hurricanes
 	</h1>
 	<p class="xs:text-[14px] mx-auto mb-8 max-w-[600px] text-gray-500 md:text-[16px]">
 		By Muxing Chen
