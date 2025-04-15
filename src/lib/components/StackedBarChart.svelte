@@ -40,7 +40,7 @@
 </script>
 
 <div
-	class="chart-outer-wrapper mx-auto mt-20 mb-8 flex h-[50vh] w-[90vw] max-w-[600px] flex-col"
+	class="chart-outer-wrapper mx-auto mt-20 mb-12 flex h-[50vh] w-[90vw] max-w-[600px] flex-col"
 	style:gap={CHART_GAP * 100 + "%"}
 	bind:clientWidth={width}
 	bind:clientHeight={height}
@@ -48,16 +48,17 @@
 	<div class="chart-inner-wrapper relative">
 		<svg width={svgWidth} height={svgHeight} role="graphics-document">
 			<g role="graphics-object" transform={`translate(${margin.left}, ${margin.top})`}>
+				<StackAxisX {data} {xBandScale} yLinearScale={gulfPopulationScale} />
+				<StackAxisY {chartWidth} yLinearScale={gulfPopulationScale} />
 				<Bar
 					{data}
 					xProperty={"year"}
 					yProperty={"gulf_population"}
 					{xBandScale}
 					yLinearScale={gulfPopulationScale}
+					color={"var(--color-gray-300)"}
 					truncation={6}
 				/>
-				<StackAxisX {data} {xBandScale} yLinearScale={gulfPopulationScale} />
-				<StackAxisY {chartWidth} yLinearScale={gulfPopulationScale} />
 			</g>
 		</svg>
 		<h1 class="absolute -top-[32px] max-w-[500px] text-[14px] font-bold text-pretty">
@@ -67,16 +68,17 @@
 	<div class="chart-inner-wrapper relative">
 		<svg width={svgWidth} height={svgHeight} role="graphics-document">
 			<g role="graphics-object" transform={`translate(${margin.left}, ${margin.top})`}>
+				<StackAxisX {data} {xBandScale} yLinearScale={southeastPopulationScale} />
+				<StackAxisY {chartWidth} yLinearScale={southeastPopulationScale} />
 				<Bar
 					{data}
 					xProperty={"year"}
 					yProperty={"southeast_population"}
 					{xBandScale}
 					yLinearScale={southeastPopulationScale}
+					color={"var(--color-gray-300)"}
 					truncation={6}
 				/>
-				<StackAxisX {data} {xBandScale} yLinearScale={southeastPopulationScale} />
-				<StackAxisY {chartWidth} yLinearScale={southeastPopulationScale} />
 			</g>
 		</svg>
 	</div>

@@ -19,7 +19,9 @@
 	let parsedData = $derived.by(() => parseWaterfallData(selectedData));
 
 	const colorScale = $derived.by(() => {
-		return scaleOrdinal().domain(["Item", "Total"]).range(["#649334", "#cc392b"]);
+		return scaleOrdinal()
+			.domain(["Total", "Others"])
+			.range(["var(--color-pink-400)", "var(--color-gray-300)"]);
 	});
 
 	let xBandScale = $derived.by(() => {
@@ -37,15 +39,15 @@
 </script>
 
 <div
-	class="chart-wrapper relative mx-auto mt-20 mb-8 h-[30vh] w-[90vw] max-w-[600px]"
+	class="chart-wrapper relative mx-auto mt-20 mb-12 h-[30vh] w-[90vw] max-w-[600px]"
 	bind:clientWidth={width}
 	bind:clientHeight={height}
 >
 	<svg {width} {height} role="graphics-document">
 		<g role="graphics-object" transform={`translate(${margin.left}, ${margin.top})`}>
-			<WaterfallBar data={parsedData} {xBandScale} yLinearScale={costScale} />
 			<WaterfallLabelX data={parsedData} {xBandScale} yLinearScale={costScale} />
 			<WaterfallLabelY {chartWidth} yLinearScale={costScale} />
+			<WaterfallBar data={parsedData} {xBandScale} yLinearScale={costScale} {colorScale} />
 		</g>
 	</svg>
 	<h1 class="absolute -top-[32px] text-[14px] font-bold" style:left="{margin.left}px">

@@ -11,7 +11,7 @@
 			x1={xBandScale(label.year) + xBandScale.bandwidth() / 2}
 			x2={xBandScale(label.year) + xBandScale.bandwidth() / 2}
 			y1={yLinearScale(6)}
-			y2={yLinearScale(6.3)}
+			y2={yLinearScale(6) - 4}
 			stroke="var(--color-gray-900)"
 			stroke-width={1}
 		/>

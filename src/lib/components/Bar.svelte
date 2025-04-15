@@ -1,5 +1,13 @@
 <script>
-	let { data, xProperty, yProperty, xBandScale, yLinearScale, truncation = 0 } = $props();
+	let {
+		data,
+		xProperty,
+		yProperty,
+		xBandScale,
+		yLinearScale,
+		color = "#d9d9d9",
+		truncation = 0
+	} = $props();
 </script>
 
 <g class="bar-chart">
@@ -10,8 +18,8 @@
 			y={yLinearScale(bar[yProperty])}
 			height={yLinearScale(0) - yLinearScale(bar[yProperty] - truncation)}
 			width={xBandScale.bandwidth()}
-			fill={"#d9d9d9"}
-			opacity={0.8}
+			fill={color}
+			opacity={0.9}
 		/>
 	{/each}
 </g>

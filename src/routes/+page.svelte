@@ -16,7 +16,7 @@
 		</h2>
 	{/if}
 	<p class="xs:text-[16px] mx-auto mb-8 max-w-[600px] md:text-[18px]">
-		{paragraph}
+		{@html paragraph}
 	</p>
 {/snippet}
 
