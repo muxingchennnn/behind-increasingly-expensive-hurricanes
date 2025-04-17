@@ -52,7 +52,7 @@
 	</svg>
 	<h1 class="absolute -top-[32px] text-[14px] font-bold" style:left="{margin.left}px">
 		Cost breakdown of the
-		<select bind:value={selectedYear.value}>
+		<select class="rounded bg-gray-200 p-1" bind:value={selectedYear.value}>
 			{#each yearOptions as year}
 				<option value={year}>
 					{year}
