@@ -1,5 +1,8 @@
 <script>
+	import { MediaQuery } from "svelte/reactivity";
 	let { data, xBandScale, yLinearScale } = $props();
+
+	const xs = new MediaQuery("min-width: 480px");
 </script>
 
 {#each data as label, i}
@@ -13,6 +16,6 @@
 		alignment-baseline="hanging"
 		fill="var(--color-gray-400)"
 	>
-		{label.decade}
+		{xs.current ? label.decade : label.decade.slice(2)}
 	</text>
 {/each}
