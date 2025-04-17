@@ -21,8 +21,7 @@
 	</p>
 {/snippet}
 
-<main class="mx-auto h-full w-[90vw] max-w-[1440px]">
-	<div class="h-16"></div>
+<main class="mx-auto my-16 h-full w-[90vw] max-w-[1440px]" role="main">
 	<h1
 		class="xs:text-[24px] mx-auto mb-4 max-w-[600px] font-serif leading-[1.2em] font-[700] text-pretty md:text-[28px]"
 	>
@@ -31,19 +30,20 @@
 	<p class="xs:text-[14px] mx-auto mb-8 max-w-[600px] text-gray-500 md:text-[16px]">
 		By Muxing Chen
 	</p>
-	{#each content as section, i}
-		{#if i === 1}
-			<AdjacentBarChart data={decadeData} />
-		{/if}
-		{@render text(section)}
-		{#if i === 1}
-			<WaterfallChart />
-		{/if}
-		{#if i === 2}
-			<StackedBarChart data={populationData} />
-		{/if}
-	{/each}
-	<div class="h-16"></div>
+	<article>
+		{#each content as section, i}
+			{#if i === 1}
+				<AdjacentBarChart data={decadeData} />
+			{/if}
+			{@render text(section)}
+			{#if i === 1}
+				<WaterfallChart />
+			{/if}
+			{#if i === 2}
+				<StackedBarChart data={populationData} />
+			{/if}
+		{/each}
+	</article>
 </main>
 
 <style>

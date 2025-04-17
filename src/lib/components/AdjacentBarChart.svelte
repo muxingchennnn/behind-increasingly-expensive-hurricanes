@@ -33,7 +33,7 @@
 	);
 </script>
 
-<div
+<figure
 	class="chart-outer-wrapper mx-auto mt-20 mb-12 flex h-[30vh] w-[90vw] max-w-[600px]"
 	style:gap={CHART_GAP * 100 + "%"}
 	bind:clientWidth={width}
@@ -77,4 +77,4 @@
 			Number of billion-dollar hurricanes per decade
 		</h1>
 	</div>
-</div>
+</figure>

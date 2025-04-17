@@ -39,7 +39,7 @@
 	);
 </script>
 
-<div
+<figure
 	class="chart-outer-wrapper mx-auto mt-20 mb-12 flex h-[50vh] w-[90vw] max-w-[600px] flex-col"
 	style:gap={CHART_GAP * 100 + "%"}
 	bind:clientWidth={width}
@@ -82,4 +82,4 @@
 			</g>
 		</svg>
 	</div>
-</div>
+</figure>

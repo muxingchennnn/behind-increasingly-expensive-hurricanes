@@ -38,7 +38,7 @@
 	});
 </script>
 
-<div
+<figure
 	class="chart-wrapper relative mx-auto mt-20 mb-12 h-[30vh] w-[90vw] max-w-[600px]"
 	bind:clientWidth={width}
 	bind:clientHeight={height}
@@ -61,7 +61,7 @@
 		</select>
 		hurricane season
 	</h1>
-</div>
+</figure>
 
 <style>
 </style>
