@@ -8,9 +8,6 @@ Northeastern University<br>
 THis is a short story that breaks down some driving factors behind the increasingly costly hurricanes, such as more coastal population, quickly intensified storms, heavier rains, etc.
 <br><br>
 
-<hr>
-## Developing
-
 If you want to preview this project, please download the repo and install dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
 
 ```bash
