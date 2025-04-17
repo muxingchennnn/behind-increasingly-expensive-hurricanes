@@ -2,7 +2,6 @@
 	let { data, xBandScale, yLinearScale } = $props();
 
 	const ticks = xBandScale.domain();
-	console.log(ticks);
 </script>
 
 {#each data as label, i}
@@ -12,7 +11,7 @@
 			x2={xBandScale(label.year) + xBandScale.bandwidth() / 2}
 			y1={yLinearScale(6)}
 			y2={yLinearScale(6) - 4}
-			stroke="var(--color-gray-900)"
+			stroke="var(--color-gray-500)"
 			stroke-width={1}
 		/>
 		<text
