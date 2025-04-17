@@ -5,7 +5,6 @@
 <g class="waterfall-chart">
 	{#each data as bar, i}
 		{@const isInDomain = colorScale.domain().includes(bar.item)}
-		{console.log(colorScale.domain())}
 		<rect
 			role="graphics-symbol"
 			x={xBandScale(bar.item)}

@@ -8,7 +8,7 @@
 	import WaterfallLabelX from "$lib/components/WaterfallLabelX.svelte";
 	import WaterfallLabelY from "$lib/components/WaterfallLabelY.svelte";
 
-	const margin = { top: 32, right: 0, bottom: 0, left: 0 };
+	const margin = { top: 32, right: 0, bottom: 16, left: 0 };
 	let width = $state(400);
 	let height = $state(400);
 	let chartWidth = $derived(width - margin.left - margin.right);
@@ -45,9 +45,9 @@
 >
 	<svg {width} {height} role="graphics-document">
 		<g role="graphics-object" transform={`translate(${margin.left}, ${margin.top})`}>
-			<WaterfallLabelX data={parsedData} {xBandScale} yLinearScale={costScale} />
 			<WaterfallLabelY {chartWidth} yLinearScale={costScale} />
 			<WaterfallBar data={parsedData} {xBandScale} yLinearScale={costScale} {colorScale} />
+			<WaterfallLabelX data={parsedData} {xBandScale} yLinearScale={costScale} />
 		</g>
 	</svg>
 	<h1 class="absolute -top-[32px] text-[14px] font-bold" style:left="{margin.left}px">
