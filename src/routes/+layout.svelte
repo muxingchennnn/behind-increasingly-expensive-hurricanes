@@ -1,6 +1,6 @@
 <script>
-	import '../app.css';
-	import '$lib/styles/fonts.css';
+	import "../app.css";
+	import "$lib/styles/fonts.css";
 
 	let { children } = $props();
 </script>

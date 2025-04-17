@@ -3,6 +3,7 @@
 	import StackedBarChart from "$lib/components/StackedBarChart.svelte";
 	import AdjacentBarChart from "$lib/components/AdjacentBarChart.svelte";
 	import WaterfallChart from "$lib/components/WaterfallChart.svelte";
+
 	let { data } = $props();
 	const { decadeData, populationData } = data;
 </script>
@@ -44,3 +45,11 @@
 	{/each}
 	<div class="h-16"></div>
 </main>
+
+<style>
+	@reference "../app.css";
+
+	:global(a) {
+		@apply text-[#326891] hover:underline hover:underline-offset-4;
+	}
+</style>
