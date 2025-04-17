@@ -48,7 +48,6 @@
 	<div class="chart-inner-wrapper relative">
 		<svg width={svgWidth} height={svgHeight} role="graphics-document">
 			<g role="graphics-object" transform={`translate(${margin.left}, ${margin.top})`}>
-				<StackAxisX {data} {xBandScale} yLinearScale={gulfPopulationScale} />
 				<StackAxisY {chartWidth} yLinearScale={gulfPopulationScale} />
 				<Bar
 					{data}
@@ -59,6 +58,7 @@
 					color={"var(--color-gray-300)"}
 					truncation={6}
 				/>
+				<StackAxisX {data} {xBandScale} yLinearScale={gulfPopulationScale} />
 			</g>
 		</svg>
 		<h1 class="absolute -top-[32px] max-w-[500px] text-[14px] font-bold text-pretty">
@@ -68,7 +68,6 @@
 	<div class="chart-inner-wrapper relative">
 		<svg width={svgWidth} height={svgHeight} role="graphics-document">
 			<g role="graphics-object" transform={`translate(${margin.left}, ${margin.top})`}>
-				<StackAxisX {data} {xBandScale} yLinearScale={southeastPopulationScale} />
 				<StackAxisY {chartWidth} yLinearScale={southeastPopulationScale} />
 				<Bar
 					{data}
@@ -79,6 +78,7 @@
 					color={"var(--color-gray-300)"}
 					truncation={6}
 				/>
+				<StackAxisX {data} {xBandScale} yLinearScale={southeastPopulationScale} />
 			</g>
 		</svg>
 	</div>
